@@ -52,7 +52,7 @@ export default function Hero() {
                 <p className="text-muted-foreground text-sm">Internships</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-primary">1</p>
+                <p className="text-3xl font-bold text-primary">2</p>
                 <p className="text-muted-foreground text-sm">Patent Filed</p>
               </div>
             </div>
