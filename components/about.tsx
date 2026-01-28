@@ -43,7 +43,7 @@ export default function About() {
                 <p className="text-sm text-muted-foreground">Current CGPA</p>
               </div>
               <div className="p-4 rounded-lg border border-border bg-card">
-                <p className="text-2xl font-bold text-primary">1 Patent</p>
+                <p className="text-2xl font-bold text-primary">2 Patent</p>
                 <p className="text-sm text-muted-foreground">Filed & Holder</p>
               </div>
             </div>
