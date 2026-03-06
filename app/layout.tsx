@@ -1,16 +1,16 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Press_Start_2P, VT323 } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const pressStart2p = Press_Start_2P({ weight: "400", subsets: ["latin"] })
+const vt323 = VT323({ weight: "400", subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Tenali Sujith Kumar - AI/ML Engineer & Full-Stack Developer",
+  title: "SUJITH // AI ENGINEER - 90's Pixel Retro Portfolio",
   description:
-    "Portfolio of Tenali Sujith Kumar, AI/ML specialist in Deep Learning, Generative AI, and Full-Stack Development. Patent holder and innovator.",
+    "Welcome to my 90's pixel-art themed portfolio! I'm Tenali Sujith Kumar, an AI Engineer specializing in Multi-Agent Systems, LLMs, Computer Vision, and Full-Stack Development.",
   generator: "v0.app",
   icons: {
     icon: [

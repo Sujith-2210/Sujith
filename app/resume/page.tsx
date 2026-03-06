@@ -1,12 +1,12 @@
 "use client"
 import Navigation from "@/components/navigation"
-import Certifications from "@/components/certifications"
+import Resume from "@/components/resume"
 
-export default function CertificationsPage() {
+export default function ResumePage() {
   return (
     <div className="min-h-screen bg-slate-950 text-foreground">
       <Navigation />
-      <Certifications />
+      <Resume />
     </div>
   )
 }
