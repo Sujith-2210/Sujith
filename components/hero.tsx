@@ -13,18 +13,18 @@ export default function Hero() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
             <div className="space-y-6 animate-pixel-wipe">
-              {/* Title with neon glow */}
+              {/* Title */}
               <div>
-                <div className="text-xs text-primary dark:text-cyan-400 font-mono mb-2 animate-blink">
+                <div className="text-xs text-primary dark:text-secondary font-mono mb-2 animate-blink">
                   {'>>> SYSTEM ONLINE <<<'}
                 </div>
-                <h1 className="text-2xl md:text-4xl font-bold text-balance mb-4 text-foreground dark:text-white font-mono neon-cyan" style={{ fontSize: '2rem', lineHeight: '1.2' }}>
+                <h1 className="text-2xl md:text-4xl font-bold text-balance mb-4 text-foreground font-mono" style={{ fontSize: '2rem', lineHeight: '1.2' }}>
                   SUJITH // AI ENGINEER
                 </h1>
-                <p className="text-xs text-secondary dark:text-magenta-400 font-mono mb-2">
+                <p className="text-xs text-secondary dark:text-primary font-mono mb-2">
                   {'[ MULTI-AGENT SYSTEMS SPECIALIST ]'}
                 </p>
-                <p className="text-xs text-accent dark:text-lime-400 font-mono">
+                <p className="text-xs text-accent dark:text-accent font-mono">
                   Deep Learning • Generative AI • Computer Vision
                 </p>
               </div>

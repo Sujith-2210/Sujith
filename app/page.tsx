@@ -1,14 +1,32 @@
 "use client"
+import { useState, useEffect } from "react"
 import Navigation from "@/components/navigation"
 import Hero from "@/components/hero"
+import CastleIntro from "@/components/castle-intro"
 import { PixelButton } from "@/components/retro-ui"
 import Link from "next/link"
 
 export default function Home() {
+  const [showIntro, setShowIntro] = useState(true)
+
+  useEffect(() => {
+    const hasSeenIntro = sessionStorage.getItem('castle-intro-shown')
+    if (hasSeenIntro) {
+      setShowIntro(false)
+    }
+  }, [])
+
+  const handleIntroComplete = () => {
+    setShowIntro(false)
+    sessionStorage.setItem('castle-intro-shown', 'true')
+  }
+
   return (
-    <div className="min-h-screen bg-background text-foreground dark:bg-slate-950">
-      <Navigation />
-      <Hero />
+    <>
+      {showIntro && <CastleIntro onComplete={handleIntroComplete} />}
+      <div className="min-h-screen bg-background text-foreground dark:bg-slate-950">
+        <Navigation />
+        <Hero />
 
       {/* Quick Navigation Section */}
       <section className="relative z-10 py-24 border-t-4 border-primary bg-card dark:bg-slate-900">
@@ -89,14 +107,15 @@ export default function Home() {
       {/* Footer */}
       <footer className="relative z-10 py-12 border-t-4 border-primary bg-background dark:bg-slate-950 text-center">
         <div className="max-w-6xl mx-auto px-4">
-          <p className="text-xs text-muted-foreground font-mono mb-2">
+          <p className="text-xs text-muted-foreground dark:text-gray-400 font-mono mb-2">
             {'[ GAME BY SUJITH // 2024-2026 ]'}
           </p>
-          <p className="text-xs text-muted-foreground font-mono">
+          <p className="text-xs text-muted-foreground dark:text-gray-600 font-mono">
             {'Built with Next.js, React, and 90s Nostalgia'}
           </p>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   )
 }

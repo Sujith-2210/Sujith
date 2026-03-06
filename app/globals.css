@@ -4,84 +4,84 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Light Theme - Retro Pixel Art */
-  --background: #f5f3f0;
-  --foreground: #0a0e27;
-  --card: #ffffff;
-  --card-foreground: #0a0e27;
-  --popover: #ffffff;
-  --popover-foreground: #0a0e27;
-  --primary: #0066cc;
+  /* Light Theme - Classic Retro Pixel Art (Castle/Nature) */
+  --background: #b0d5ea;
+  --foreground: #2d2d2d;
+  --card: #f5f3f0;
+  --card-foreground: #2d2d2d;
+  --popover: #f5f3f0;
+  --popover-foreground: #2d2d2d;
+  --primary: #6b8e4f;
   --primary-foreground: #ffffff;
-  --secondary: #ff6600;
-  --secondary-foreground: #ffffff;
-  --muted: #d0ccc8;
+  --secondary: #d4a574;
+  --secondary-foreground: #2d2d2d;
+  --muted: #c9bab5;
   --muted-foreground: #6b6661;
-  --accent: #ff3366;
+  --accent: #e8956f;
   --accent-foreground: #ffffff;
-  --destructive: #cc0000;
+  --destructive: #c44536;
   --destructive-foreground: #ffffff;
   --border: #d0ccc8;
   --input: #ffffff;
-  --ring: #0066cc;
-  --chart-1: #0066cc;
-  --chart-2: #ff6600;
-  --chart-3: #ff3366;
-  --chart-4: #ffcc00;
-  --chart-5: #00cc66;
+  --ring: #6b8e4f;
+  --chart-1: #6b8e4f;
+  --chart-2: #d4a574;
+  --chart-3: #e8956f;
+  --chart-4: #f5d99f;
+  --chart-5: #8bc34a;
   --radius: 0rem;
   --sidebar: #f5f3f0;
-  --sidebar-foreground: #0a0e27;
-  --sidebar-primary: #0066cc;
+  --sidebar-foreground: #2d2d2d;
+  --sidebar-primary: #6b8e4f;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #ff6600;
-  --sidebar-accent-foreground: #ffffff;
+  --sidebar-accent: #d4a574;
+  --sidebar-accent-foreground: #2d2d2d;
   --sidebar-border: #d0ccc8;
-  --sidebar-ring: #0066cc;
+  --sidebar-ring: #6b8e4f;
 
   /* Shadow effects for light theme */
-  --shadow-primary: 0 0 12px rgba(0, 102, 204, 0.2);
-  --shadow-secondary: 0 0 12px rgba(255, 102, 0, 0.2);
-  --shadow-accent: 0 0 12px rgba(255, 51, 102, 0.2);
+  --shadow-primary: 0 4px 8px rgba(107, 142, 79, 0.15);
+  --shadow-secondary: 0 4px 8px rgba(212, 165, 116, 0.15);
+  --shadow-accent: 0 4px 8px rgba(232, 149, 111, 0.15);
 
-  /* Dark Theme - Neon Pixel Art */
-  --dark-background: #0a0e27;
-  --dark-foreground: #ffffff;
-  --dark-card: #1a1f3a;
-  --dark-card-foreground: #ffffff;
-  --dark-popover: #1a1f3a;
-  --dark-popover-foreground: #ffffff;
-  --dark-primary: #00ffff;
-  --dark-primary-foreground: #0a0e27;
-  --dark-secondary: #ff00ff;
-  --dark-secondary-foreground: #ffffff;
-  --dark-muted: #4a5a7a;
-  --dark-muted-foreground: #a0a8c8;
-  --dark-accent: #00ff00;
-  --dark-accent-foreground: #0a0e27;
-  --dark-destructive: #ff1493;
-  --dark-destructive-foreground: #ffffff;
-  --dark-border: #2a3f5f;
-  --dark-input: #1a2f4a;
-  --dark-ring: #00ffff;
-  --dark-chart-1: #00ffff;
-  --dark-chart-2: #ff00ff;
-  --dark-chart-3: #00ff00;
-  --dark-chart-4: #ffff00;
-  --dark-chart-5: #ff1493;
-  --dark-sidebar: #1a1f3a;
-  --dark-sidebar-foreground: #ffffff;
-  --dark-sidebar-primary: #00ffff;
-  --dark-sidebar-primary-foreground: #0a0e27;
-  --dark-sidebar-accent: #ff00ff;
-  --dark-sidebar-accent-foreground: #ffffff;
-  --dark-sidebar-border: #2a3f5f;
-  --dark-sidebar-ring: #00ffff;
+  /* Dark Theme - Retro Sunset/Night */
+  --dark-background: #6b4f8f;
+  --dark-foreground: #f5f3f0;
+  --dark-card: #4a3d63;
+  --dark-card-foreground: #f5f3f0;
+  --dark-popover: #4a3d63;
+  --dark-popover-foreground: #f5f3f0;
+  --dark-primary: #f5b98f;
+  --dark-primary-foreground: #2d2d2d;
+  --dark-secondary: #e8956f;
+  --dark-secondary-foreground: #f5f3f0;
+  --dark-muted: #8b7ba0;
+  --dark-muted-foreground: #d9d4cf;
+  --dark-accent: #ffd95f;
+  --dark-accent-foreground: #2d2d2d;
+  --dark-destructive: #d97a6d;
+  --dark-destructive-foreground: #f5f3f0;
+  --dark-border: #6b5a7d;
+  --dark-input: #5a4d72;
+  --dark-ring: #f5b98f;
+  --dark-chart-1: #f5b98f;
+  --dark-chart-2: #e8956f;
+  --dark-chart-3: #ffd95f;
+  --dark-chart-4: #b89ce8;
+  --dark-chart-5: #8bc34a;
+  --dark-sidebar: #4a3d63;
+  --dark-sidebar-foreground: #f5f3f0;
+  --dark-sidebar-primary: #f5b98f;
+  --dark-sidebar-primary-foreground: #2d2d2d;
+  --dark-sidebar-accent: #e8956f;
+  --dark-sidebar-accent-foreground: #f5f3f0;
+  --dark-sidebar-border: #6b5a7d;
+  --dark-sidebar-ring: #f5b98f;
 
   /* Shadow effects for dark theme */
-  --dark-shadow-primary: 0 0 12px rgba(0, 255, 255, 0.3);
-  --dark-shadow-secondary: 0 0 12px rgba(255, 0, 255, 0.3);
-  --dark-shadow-accent: 0 0 12px rgba(0, 255, 0, 0.3);
+  --dark-shadow-primary: 0 4px 12px rgba(245, 185, 143, 0.25);
+  --dark-shadow-secondary: 0 4px 12px rgba(232, 149, 111, 0.25);
+  --dark-shadow-accent: 0 4px 12px rgba(255, 217, 95, 0.25);
 }
 
 .dark {
