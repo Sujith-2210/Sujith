@@ -203,176 +203,53 @@
   }
 }
 
-/* 90's Pixel Art Animations */
+/* Smooth scrolling animations */
 
-/* Neon glow effect */
-@keyframes neonGlow {
-  0%,
-  100% {
-    text-shadow: 0 0 4px currentColor, 0 0 8px currentColor;
-    box-shadow: 0 0 8px currentColor, inset 0 0 8px rgba(0, 255, 255, 0.2);
-  }
-  50% {
-    text-shadow: 0 0 8px currentColor, 0 0 16px currentColor, 0 0 24px currentColor;
-    box-shadow: 0 0 16px currentColor, inset 0 0 16px rgba(0, 255, 255, 0.3);
-  }
-}
-
-/* Scanline effect */
-@keyframes scanlines {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 4px;
-  }
-}
-
-/* Pixel wipe transition */
-@keyframes pixelWipeIn {
+@keyframes fadeInUp {
   from {
-    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-
-/* Floating animation - jumping like 8-bit character */
-@keyframes pixelJump {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-16px);
-  }
-}
-
-/* Blinking cursor */
-@keyframes blink {
-  0%, 49% {
     opacity: 1;
+    transform: translateY(0);
   }
-  50%, 100% {
+}
+
+@keyframes slideInLeft {
+  from {
     opacity: 0;
+    transform: translateX(-20px);
   }
-}
-
-/* CRT flicker */
-@keyframes crtFlicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+  to {
     opacity: 1;
-  }
-  20%, 24%, 55% {
-    opacity: 0.95;
+    transform: translateX(0);
   }
 }
 
-/* Pixel sprite walking animation */
-@keyframes walkLeft {
+@keyframes softGlow {
   0%, 100% {
-    background-position: 0 0;
-  }
-  25% {
-    background-position: -32px 0;
+    box-shadow: var(--shadow-primary);
   }
   50% {
-    background-position: -64px 0;
-  }
-  75% {
-    background-position: -96px 0;
-  }
-}
-
-/* Color shift for neon lines */
-@keyframes colorShift {
-  0% {
-    color: #00ffff;
-  }
-  25% {
-    color: #ff00ff;
-  }
-  50% {
-    color: #00ff00;
-  }
-  75% {
-    color: #ffff00;
-  }
-  100% {
-    color: #00ffff;
-  }
-}
-
-/* Pulse for stat bars */
-@keyframes pulseBar {
-  0%, 100% {
-    background-color: #00ffff;
-  }
-  50% {
-    background-color: #00cccc;
+    box-shadow: var(--shadow-secondary);
   }
 }
 
 /* Pixel Art Animation Utilities */
 
-.animate-neon-glow {
-  animation: neonGlow 1.5s ease-in-out infinite;
+/* Smooth animation utilities for 3D portfolio */
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.animate-scanlines {
-  background-image: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.3) 0px,
-    rgba(0, 0, 0, 0.3) 2px,
-    transparent 2px,
-    transparent 4px
-  );
-  animation: scanlines 8s linear infinite;
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
 }
 
-.animate-pixel-wipe {
-  animation: pixelWipeIn 0.8s ease-out forwards;
-}
-
-.animate-pixel-jump {
-  animation: pixelJump 0.6s ease-in-out infinite;
-}
-
-.animate-blink {
-  animation: blink 1s step-end infinite;
-}
-
-.animate-crt-flicker {
-  animation: crtFlicker 0.15s infinite;
-}
-
-.animate-walk {
-  animation: walkLeft 0.4s steps(4) infinite;
-}
-
-.animate-color-shift {
-  animation: colorShift 4s ease-in-out infinite;
-}
-
-.animate-pulse-bar {
-  animation: pulseBar 1.5s ease-in-out infinite;
-}
-
-/* Classic pixel art animations */
-.animate-float {
-  animation: pixelJump 0.6s ease-in-out infinite;
-}
-
-.animate-glow {
-  animation: neonGlow 1.5s ease-in-out infinite;
-}
-
-.animate-slide-in-up {
-  animation: pixelWipeIn 0.6s ease-out;
-}
-
-.animate-slide-in-down {
-  animation: pixelWipeIn 0.6s ease-out;
+.animate-soft-glow {
+  animation: softGlow 3s ease-in-out infinite;
 }
 
 .animate-fade-in-scale {
@@ -417,100 +294,21 @@
 }
 
 /* Pixel borders for UI elements */
-.pixel-border {
-  border: 2px solid var(--primary);
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+/* Modern card styling for 3D portfolio */
+.glass-effect {
+  @apply bg-card/80 backdrop-blur-xl border border-border/50;
 }
 
-.pixel-border-secondary {
-  border: 2px solid var(--secondary);
-  box-shadow: 0 0 8px rgba(255, 0, 255, 0.4);
-}
-
-.pixel-border-accent {
-  border: 2px solid var(--accent);
-  box-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
-}
-
-/* CRT Monitor Effect */
-.crt-screen {
-  position: relative;
-  border: 8px solid #2a2a2a;
-  border-radius: 0;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7), inset 0 0 20px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-
-.crt-screen::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.15) 0px,
-    rgba(0, 0, 0, 0.15) 1px,
-    transparent 1px,
-    transparent 2px
-  );
-  pointer-events: none;
-  z-index: 10;
-}
-
-/* Neon glow effect for text and elements */
-.neon-cyan {
-  color: #00ffff;
-  text-shadow: 0 0 4px #00ffff, 0 0 8px #00ffff, 0 0 12px rgba(0, 255, 255, 0.4);
-}
-
-.neon-magenta {
-  color: #ff00ff;
-  text-shadow: 0 0 4px #ff00ff, 0 0 8px #ff00ff, 0 0 12px rgba(255, 0, 255, 0.4);
-}
-
-.neon-lime {
-  color: #00ff00;
-  text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff00, 0 0 12px rgba(0, 255, 0, 0.4);
-}
-
-.neon-yellow {
-  color: #ffff00;
-  text-shadow: 0 0 4px #ffff00, 0 0 8px #ffff00, 0 0 12px rgba(255, 255, 0, 0.4);
-}
-
-/* Transitions for pixel art */
-.transition-smooth {
-  @apply transition-all duration-200 ease-out;
-}
-
-/* Pixel card hover effect */
 .card-hover {
-  @apply transition-all duration-200 ease-out;
-  border-color: var(--primary);
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  @apply transition-all duration-300 ease-out;
 }
 
 .card-hover:hover {
-  border-color: var(--secondary);
-  box-shadow: 0 0 16px rgba(0, 255, 255, 0.5), 0 0 12px rgba(255, 0, 255, 0.3);
-  transform: translateY(-2px);
+  @apply shadow-lg -translate-y-1;
 }
 
-/* Dialogue box styling */
-.dialogue-box {
-  @apply bg-card border-2 border-primary p-4 relative;
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
-}
-
-.dialogue-box::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 20px;
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid var(--primary);
+.transition-smooth {
+  @apply transition-all duration-300 ease-out;
 }
 
 .text-balance {
