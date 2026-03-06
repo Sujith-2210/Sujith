@@ -6,25 +6,25 @@ import Link from "next/link"
 
 export default function Hero() {
   return (
-    <section className="relative z-10 min-h-screen flex items-center justify-center pt-32 pb-20 animate-fade-in">
+    <section className="relative z-10 min-h-screen flex items-center justify-center pt-32 pb-20 animate-fade-in bg-background dark:bg-slate-950">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Main CRT Screen Effect */}
-        <div className="crt-screen rounded-none border-8 border-gray-700 p-8 md:p-12">
+        <div className="crt-screen rounded-none border-8 border-border dark:border-gray-700 p-8 md:p-12 bg-card dark:bg-slate-800">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
             <div className="space-y-6 animate-pixel-wipe">
               {/* Title with neon glow */}
               <div>
-                <div className="text-xs text-cyan-400 font-mono mb-2 animate-blink">
+                <div className="text-xs text-primary dark:text-cyan-400 font-mono mb-2 animate-blink">
                   {'>>> SYSTEM ONLINE <<<'}
                 </div>
-                <h1 className="text-2xl md:text-4xl font-bold text-balance mb-4 text-white font-mono neon-cyan" style={{ fontSize: '2rem', lineHeight: '1.2' }}>
+                <h1 className="text-2xl md:text-4xl font-bold text-balance mb-4 text-foreground dark:text-white font-mono neon-cyan" style={{ fontSize: '2rem', lineHeight: '1.2' }}>
                   SUJITH // AI ENGINEER
                 </h1>
-                <p className="text-xs text-magenta-400 font-mono mb-2">
+                <p className="text-xs text-secondary dark:text-magenta-400 font-mono mb-2">
                   {'[ MULTI-AGENT SYSTEMS SPECIALIST ]'}
                 </p>
-                <p className="text-xs text-lime-400 font-mono">
+                <p className="text-xs text-accent dark:text-lime-400 font-mono">
                   Deep Learning • Generative AI • Computer Vision
                 </p>
               </div>

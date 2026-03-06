@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Press_Start_2P, VT323 } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
+import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 const pressStart2p = Press_Start_2P({ weight: "400", subsets: ["latin"] })
@@ -37,10 +37,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans antialiased`} suppressHydrationWarning>
-        {children}
-        <Analytics />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`font-sans antialiased`}>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

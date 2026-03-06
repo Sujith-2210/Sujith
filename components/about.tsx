@@ -5,14 +5,14 @@ import { DialogueBox, StatCard, PixelPanel } from "./retro-ui"
 
 export default function About() {
   return (
-    <section className="relative z-10 py-24 bg-slate-950 border-t-4 border-cyan-500">
+    <section className="relative z-10 py-24 bg-background dark:bg-slate-950 border-t-4 border-primary dark:border-cyan-500">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Title */}
         <div className="mb-16 animate-pixel-wipe">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-balance font-mono neon-cyan">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-balance font-mono text-primary dark:text-cyan-400 neon-cyan">
             {'>> ABOUT SUJITH'}
           </h2>
-          <p className="text-xs text-gray-400 font-mono">
+          <p className="text-xs text-muted-foreground dark:text-gray-400 font-mono">
             {'[ LOADING PROFILE DATA... ]'}
           </p>
         </div>
