@@ -2,6 +2,9 @@
 
 import { ExternalLink, Code2 } from "lucide-react"
 import Link from "next/link"
+import { motion } from "framer-motion"
+import MotionCard from "./motion-card"
+import BlurText from "./blur-text"
 
 const projects = [
   {
@@ -149,93 +152,177 @@ export default function AllProjects() {
   const featuredProjects = projects.filter((p) => p.featured)
   const otherProjects = projects.filter((p) => !p.featured)
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  }
+
   return (
     <section className="relative z-10 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
-            <span className="text-foreground">All Projects</span>
-            <span className="block text-primary">20+ AI/ML & Full-Stack Solutions</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            Exploring the frontiers of AI, from deep learning to robotics and intelligent systems.
-          </p>
-        </div>
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <BlurText
+            text="All Projects"
+            delay={0}
+            duration={0.6}
+            className="text-4xl md:text-5xl font-bold mb-4 text-balance text-foreground"
+          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">20+ AI/ML & Full-Stack Solutions</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              Exploring the frontiers of AI, from deep learning to robotics and intelligent systems.
+            </p>
+          </motion.div>
+        </motion.div>
 
         {/* Featured Projects */}
-        <div className="mb-20">
+        <motion.div
+          className="mb-20"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h3 className="text-2xl font-bold text-foreground mb-8">Featured Projects</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <motion.div
+            className="grid md:grid-cols-3 gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
             {featuredProjects.map((project, index) => (
-              <div
-                key={index}
-                className="group p-6 rounded-xl border border-primary/30 bg-card hover:border-primary transition-all duration-200 hover:shadow-lg hover:shadow-primary/10"
-              >
+              <MotionCard key={index} index={index} delay={0.1} className="group p-6 rounded-xl crystalline-border bg-card glass-effect">
                 <div className="flex items-start justify-between mb-4">
-                  <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold">
+                  <motion.span
+                    className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold"
+                    whileHover={{ scale: 1.05 }}
+                  >
                     {project.category}
-                  </span>
-                  <Code2 className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </motion.span>
+                  <motion.div initial={{ opacity: 0 }} whileHover={{ opacity: 1 }} transition={{ duration: 0.2 }}>
+                    <Code2 className="w-5 h-5 text-primary" />
+                  </motion.div>
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">{project.title}</h3>
                 <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.skills.map((skill) => (
-                    <span key={skill} className="text-xs px-2 py-1 rounded bg-secondary/20 text-secondary">
+                    <motion.span
+                      key={skill}
+                      className="text-xs px-2 py-1 rounded bg-secondary/20 text-secondary"
+                      whileHover={{ scale: 1.05, backgroundColor: "rgba(114, 184, 255, 0.3)" }}
+                    >
                       {skill}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
-              </div>
+              </MotionCard>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Other Projects */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h3 className="text-2xl font-bold text-foreground mb-8">Other Notable Projects</h3>
-          <div className="grid md:grid-cols-2 gap-4">
+          <motion.div
+            className="grid md:grid-cols-2 gap-4"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
             {otherProjects.map((project, index) => (
-              <div
+              <MotionCard
                 key={index}
-                className="p-4 rounded-lg border border-border bg-card/50 hover:border-primary/50 transition-colors duration-200"
+                index={index}
+                delay={0.05}
+                className="p-4 rounded-lg crystalline-border bg-card/50 glass-effect"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <span className="px-2 py-1 rounded text-xs font-bold bg-secondary/20 text-secondary">
+                  <motion.span
+                    className="px-2 py-1 rounded text-xs font-bold bg-secondary/20 text-secondary"
+                    whileHover={{ scale: 1.05 }}
+                  >
                     {project.category}
-                  </span>
+                  </motion.span>
                 </div>
                 <h4 className="text-lg font-bold text-foreground mb-2">{project.title}</h4>
                 <p className="text-muted-foreground text-sm mb-3">{project.description}</p>
                 <div className="flex flex-wrap gap-1">
                   {project.skills.slice(0, 3).map((skill) => (
-                    <span key={skill} className="text-xs px-1.5 py-0.5 rounded bg-primary/10 text-primary/80">
+                    <motion.span
+                      key={skill}
+                      className="text-xs px-1.5 py-0.5 rounded bg-primary/10 text-primary/80"
+                      whileHover={{ scale: 1.05 }}
+                    >
                       {skill}
-                    </span>
+                    </motion.span>
                   ))}
                   {project.skills.length > 3 && (
                     <span className="text-xs px-1.5 py-0.5 text-muted-foreground">+{project.skills.length - 3}</span>
                   )}
                 </div>
-              </div>
+              </MotionCard>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div className="mt-20 p-8 rounded-xl border border-border bg-gradient-to-r from-primary/10 to-secondary/10 text-center">
-          <h3 className="text-2xl font-bold text-foreground mb-4">Interested in Collaboration?</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            I'm always open to discussing new projects, exciting technologies, and unique opportunities.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition-opacity duration-200 font-medium"
+        <motion.div
+          className="mt-20 p-8 rounded-xl crystalline-border bg-gradient-to-r from-primary/10 to-secondary/10 text-center glass-effect"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <BlurText
+            text="Interested in Collaboration?"
+            delay={0}
+            duration={0.6}
+            className="text-2xl font-bold text-foreground mb-4"
+          />
+          <motion.p
+            className="text-muted-foreground mb-6 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Get in Touch
-            <ExternalLink className="w-4 h-4" />
-          </Link>
-        </div>
+            I&apos;m always open to discussing new projects, exciting technologies, and unique opportunities.
+          </motion.p>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium transition-all duration-300"
+            >
+              Get in Touch
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )
