@@ -6,8 +6,27 @@ import { ArrowRight } from "lucide-react"
 
 export default function Hero() {
   return (
-    <section className="relative z-10 min-h-screen flex items-center justify-center pt-20 animate-fade-in">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <section className="relative w-full min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      {/* Cinematic video background */}
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+          aria-label="Cinematic background"
+        >
+          <source src="https://videos.pexels.com/video-files/3561339/3561339-hd_1920_1080_30fps.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Velorah cinematic overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-slide-in-left">
             <div>
@@ -59,7 +78,7 @@ export default function Hero() {
           </div>
 
           <div className="hidden md:flex items-center justify-center animate-slide-in-right">
-            <div className="relative w-80 h-96 rounded-2xl overflow-hidden border border-border shadow-2xl hover:scale-105 hover:shadow-primary/20 transition-all duration-500 animate-float">
+            <div className="relative w-80 h-96 rounded-2xl overflow-hidden border border-border/50 shadow-2xl hover:scale-105 hover:shadow-primary/20 transition-all duration-500 animate-float glass-effect">
               <Image
                 src="/images/adobe-20express-20-20file-20-281-29.jpg"
                 alt="Tenali Sujith Kumar - AI/ML Engineer"

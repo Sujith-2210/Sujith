@@ -23,10 +23,10 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border animate-fade-in-down">
+    <nav className="fixed top-0 z-50 w-full bg-background/50 backdrop-blur-2xl border-b border-primary/10 animate-fade-in-down">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-2xl font-bold text-primary hover:scale-110 transition-transform duration-300">
+          <Link href="/" className="text-2xl font-bold text-primary hover:scale-110 transition-transform duration-300 hover:drop-shadow-lg hover:drop-shadow-primary/50">
             Sujith
           </Link>
 
@@ -35,10 +35,10 @@ export default function Navigation() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-all duration-300 text-sm font-medium relative group"
+                className="text-foreground/80 hover:text-primary transition-all duration-300 text-sm font-medium relative group"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
           </div>

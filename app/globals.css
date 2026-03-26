@@ -4,75 +4,75 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Apple-inspired minimalist color palette with premium feel */
-  --background: oklch(0.08 0 0);
-  --foreground: oklch(0.97 0 0);
-  --card: oklch(0.12 0 0);
-  --card-foreground: oklch(0.97 0 0);
-  --popover: oklch(0.12 0 0);
-  --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.76 0.19 86);
-  --primary-foreground: oklch(0.08 0 0);
-  --secondary: oklch(0.68 0.14 295);
-  --secondary-foreground: oklch(0.97 0 0);
-  --muted: oklch(0.28 0 0);
-  --muted-foreground: oklch(0.62 0 0);
-  --accent: oklch(0.76 0.19 86);
-  --accent-foreground: oklch(0.08 0 0);
+  /* Velorah cinematic theme - Deep navy with crystalline accents */
+  --background: oklch(0.06 0.01 250);
+  --foreground: oklch(0.95 0.01 250);
+  --card: oklch(0.1 0.02 250);
+  --card-foreground: oklch(0.95 0.01 250);
+  --popover: oklch(0.1 0.02 250);
+  --popover-foreground: oklch(0.95 0.01 250);
+  --primary: oklch(0.78 0.22 250);
+  --primary-foreground: oklch(0.06 0.01 250);
+  --secondary: oklch(0.72 0.18 200);
+  --secondary-foreground: oklch(0.95 0.01 250);
+  --muted: oklch(0.25 0.02 250);
+  --muted-foreground: oklch(0.65 0.02 250);
+  --accent: oklch(0.78 0.22 250);
+  --accent-foreground: oklch(0.06 0.01 250);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.97 0 0);
-  --border: oklch(0.18 0 0);
-  --input: oklch(0.15 0 0);
-  --ring: oklch(0.68 0.14 295);
-  --chart-1: oklch(0.76 0.19 86);
-  --chart-2: oklch(0.68 0.14 295);
-  --chart-3: oklch(0.58 0.16 275);
-  --chart-4: oklch(0.72 0.13 48);
-  --chart-5: oklch(0.62 0.11 285);
+  --border: oklch(0.15 0.02 250);
+  --input: oklch(0.12 0.02 250);
+  --ring: oklch(0.78 0.22 250);
+  --chart-1: oklch(0.78 0.22 250);
+  --chart-2: oklch(0.72 0.18 200);
+  --chart-3: oklch(0.68 0.15 180);
+  --chart-4: oklch(0.75 0.2 270);
+  --chart-5: oklch(0.7 0.16 220);
   --radius: 0.75rem;
-  --sidebar: oklch(0.12 0 0);
-  --sidebar-foreground: oklch(0.97 0 0);
-  --sidebar-primary: oklch(0.76 0.19 86);
-  --sidebar-primary-foreground: oklch(0.08 0 0);
-  --sidebar-accent: oklch(0.68 0.14 295);
-  --sidebar-accent-foreground: oklch(0.97 0 0);
-  --sidebar-border: oklch(0.18 0 0);
-  --sidebar-ring: oklch(0.68 0.14 295);
+  --sidebar: oklch(0.1 0.02 250);
+  --sidebar-foreground: oklch(0.95 0.01 250);
+  --sidebar-primary: oklch(0.78 0.22 250);
+  --sidebar-primary-foreground: oklch(0.06 0.01 250);
+  --sidebar-accent: oklch(0.72 0.18 200);
+  --sidebar-accent-foreground: oklch(0.95 0.01 250);
+  --sidebar-border: oklch(0.15 0.02 250);
+  --sidebar-ring: oklch(0.78 0.22 250);
 }
 
 .dark {
-  --background: oklch(0.08 0 0);
-  --foreground: oklch(0.97 0 0);
-  --card: oklch(0.12 0 0);
-  --card-foreground: oklch(0.97 0 0);
-  --popover: oklch(0.12 0 0);
-  --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.76 0.19 86);
-  --primary-foreground: oklch(0.08 0 0);
-  --secondary: oklch(0.68 0.14 295);
-  --secondary-foreground: oklch(0.97 0 0);
-  --muted: oklch(0.28 0 0);
-  --muted-foreground: oklch(0.62 0 0);
-  --accent: oklch(0.76 0.19 86);
-  --accent-foreground: oklch(0.08 0 0);
+  --background: oklch(0.06 0.01 250);
+  --foreground: oklch(0.95 0.01 250);
+  --card: oklch(0.1 0.02 250);
+  --card-foreground: oklch(0.95 0.01 250);
+  --popover: oklch(0.1 0.02 250);
+  --popover-foreground: oklch(0.95 0.01 250);
+  --primary: oklch(0.78 0.22 250);
+  --primary-foreground: oklch(0.06 0.01 250);
+  --secondary: oklch(0.72 0.18 200);
+  --secondary-foreground: oklch(0.95 0.01 250);
+  --muted: oklch(0.25 0.02 250);
+  --muted-foreground: oklch(0.65 0.02 250);
+  --accent: oklch(0.78 0.22 250);
+  --accent-foreground: oklch(0.06 0.01 250);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.97 0 0);
-  --border: oklch(0.18 0 0);
-  --input: oklch(0.15 0 0);
-  --ring: oklch(0.68 0.14 295);
-  --chart-1: oklch(0.76 0.19 86);
-  --chart-2: oklch(0.68 0.14 295);
-  --chart-3: oklch(0.58 0.16 275);
-  --chart-4: oklch(0.72 0.13 48);
-  --chart-5: oklch(0.62 0.11 285);
-  --sidebar: oklch(0.12 0 0);
-  --sidebar-foreground: oklch(0.97 0 0);
-  --sidebar-primary: oklch(0.76 0.19 86);
-  --sidebar-primary-foreground: oklch(0.08 0 0);
-  --sidebar-accent: oklch(0.68 0.14 295);
-  --sidebar-accent-foreground: oklch(0.97 0 0);
-  --sidebar-border: oklch(0.18 0 0);
-  --sidebar-ring: oklch(0.68 0.14 295);
+  --border: oklch(0.15 0.02 250);
+  --input: oklch(0.12 0.02 250);
+  --ring: oklch(0.78 0.22 250);
+  --chart-1: oklch(0.78 0.22 250);
+  --chart-2: oklch(0.72 0.18 200);
+  --chart-3: oklch(0.68 0.15 180);
+  --chart-4: oklch(0.75 0.2 270);
+  --chart-5: oklch(0.7 0.16 220);
+  --sidebar: oklch(0.1 0.02 250);
+  --sidebar-foreground: oklch(0.95 0.01 250);
+  --sidebar-primary: oklch(0.78 0.22 250);
+  --sidebar-primary-foreground: oklch(0.06 0.01 250);
+  --sidebar-accent: oklch(0.72 0.18 200);
+  --sidebar-accent-foreground: oklch(0.95 0.01 250);
+  --sidebar-border: oklch(0.15 0.02 250);
+  --sidebar-ring: oklch(0.78 0.22 250);
 }
 
 @theme inline {
@@ -280,9 +280,9 @@
   animation: pulseSoft 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Apple-inspired glass morphism effect */
+/* Velorah glass morphism effect - crystalline, luminous */
 .glass-effect {
-  @apply bg-card/80 backdrop-blur-xl border border-border/50;
+  @apply bg-card/60 backdrop-blur-2xl border border-primary/20 shadow-lg shadow-primary/10;
 }
 
 /* Enhanced blur and backdrop effects */
@@ -310,4 +310,48 @@
 
 .text-pretty {
   text-wrap: pretty;
+}
+
+/* Velorah cinematic effects */
+@keyframes cinematicGlow {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(178, 190, 255, 0.3),
+                 0 0 40px rgba(100, 150, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(178, 190, 255, 0.5),
+                 0 0 60px rgba(100, 150, 255, 0.2);
+  }
+}
+
+.animate-cinematic-glow {
+  animation: cinematicGlow 4s ease-in-out infinite;
+}
+
+/* Enhanced card hover for Velorah */
+.card-hover-cinematic {
+  @apply transition-all duration-500 ease-out;
+}
+
+.card-hover-cinematic:hover {
+  @apply shadow-2xl shadow-primary/20 border-primary/40 -translate-y-2;
+  backdrop-filter: blur(16px);
+}
+
+/* Crystalline border glow */
+.crystalline-border {
+  @apply border border-primary/30;
+  box-shadow: inset 0 0 20px rgba(178, 190, 255, 0.1),
+              0 0 20px rgba(178, 190, 255, 0.05);
+}
+
+/* Cinematic overlay for sections */
+.cinematic-overlay {
+  @apply relative;
+}
+
+.cinematic-overlay::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20;
+  pointer-events: none;
 }
