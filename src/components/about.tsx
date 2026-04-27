@@ -37,11 +37,11 @@ export default function About() {
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
               <div className="p-4 rounded-lg border border-border liquid-glass">
-                <p className="text-2xl font-bold text-primary">8.89/10</p>
+                <p className="text-2xl font-bold text-primary">8.97/10</p>
                 <p className="text-sm text-muted-foreground">Current CGPA</p>
               </div>
               <div className="p-4 rounded-lg border border-border liquid-glass">
-                <p className="text-2xl font-bold text-primary">2 Patent</p>
+                <p className="text-2xl font-bold text-primary">3 Patent</p>
                 <p className="text-sm text-muted-foreground">Filed & Holder</p>
               </div>
               <div className="p-4 rounded-lg border border-border liquid-glass">
